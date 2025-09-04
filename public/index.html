@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vishal Manager Dashboard (Frontend Demo)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <nav class="w-64 bg-white shadow-lg flex-shrink-0 flex flex-col py-6 px-4" aria-label="Sidebar">
+      <div class="mb-8 flex items-center">
+        <i class="fa-solid fa-layer-group text-indigo-600 text-2xl mr-2"></i>
+        <span class="font-bold text-xl">Daksh Management System</span>
+      </div>
+      <ul class="space-y-2">
+        <li><button class="sidebar-btn w-full text-left px-3 py-2 rounded hover:bg-indigo-100" data-view="departments"><i class="fa-solid fa-building mr-2"></i>Departments</button></li>
+        <li><button class="sidebar-btn w-full text-left px-3 py-2 rounded hover:bg-indigo-100" data-view="members"><i class="fa-solid fa-users mr-2"></i>Members</button></li>
+        <li><button class="sidebar-btn w-full text-left px-3 py-2 rounded hover:bg-indigo-100" data-view="tasks"><i class="fa-solid fa-tasks mr-2"></i>Tasks</button></li>
+        <li><button class="sidebar-btn w-full text-left px-3 py-2 rounded hover:bg-indigo-100" data-view="printlog"><i class="fa-solid fa-print mr-2"></i>Print Log</button></li>
+        <li><button class="sidebar-btn w-full text-left px-3 py-2 rounded hover:bg-indigo-100" data-view="analytics"><i class="fa-solid fa-chart-pie mr-2"></i>Analytics</button></li>
+      </ul>
+    </nav>
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto p-8" id="main-content" tabindex="0" aria-live="polite">
+      <!-- Dynamic content loaded here -->
+    </main>
+    <!-- Toasts -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

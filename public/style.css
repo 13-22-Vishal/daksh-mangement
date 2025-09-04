@@ -1,0 +1,15 @@
+/* Custom styles for subtle transitions and focus */
+:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+.dept-details {
+  transition: max-height 0.3s, opacity 0.3s;
+}
+.kanban-task {
+  cursor: grab;
+  transition: box-shadow 0.2s;
+}
+.kanban-task:active {
+  box-shadow: 0 2px 8px rgba(99,102,241,0.2);
+}
