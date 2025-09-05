@@ -1,4 +1,4 @@
-// Static demo data (Indian names, departments, etc.)
+
 const departments = [
   { id: 1, name: "CAD", description: "Design and modeling" },
   { id: 2, name: "CFD", description: "Simulation and analysis" },
@@ -125,7 +125,6 @@ function loadView(view) {
       `;
     }
     html += '</tbody></table></div>';
-    // Kanban
     html += `<div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="kanban-board">`;
     ['Pending', 'In Progress', 'Completed'].forEach(status => {
       html += `
@@ -190,7 +189,7 @@ function loadView(view) {
       </div>
     `;
     setTimeout(() => {
-      // Pie chart: % completed per department
+      
       const labels = [...new Set(tasks.map(t => t.department))];
       const data = labels.map(dept => {
         const total = tasks.filter(t => t.department === dept).length;
@@ -208,7 +207,7 @@ function loadView(view) {
         },
         options: { plugins: { legend: { position: 'bottom' } } }
       });
-      // Line chart: prints per day
+    
       const printDates = printLogs.map(l => l.printed_at);
       const dateCounts = {};
       printDates.forEach(d => dateCounts[d] = (dateCounts[d] || 0) + 1);
@@ -231,4 +230,5 @@ function loadView(view) {
       });
     }, 300);
   }
+
 }
